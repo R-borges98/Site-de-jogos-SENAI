@@ -1,0 +1,81 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(24, 15, 15);
+    height: 80px;
+    
+
+}
+
+.container-grid{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Reboto', sans-serif;
+}
+
+.menu{
+    width: 660px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a:hover{
+    color: rgb(130, 192, 67);
+}
+
+.texto{
+    color: white;
+    text-decoration: none;
+}
+
+.banner{
+    height: 500px;
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+
+}
+
+.botao{
+    font-family: 'Reboto';
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    background: rgba(23, 250, 23, 0.781);
+    border-radius: 35px;
+}
+
+.botao:hover{
+    background: rgba(43, 49, 47, 0.705) ;
+    transition: 0.7s all;
+}
+
+.posicao {
+    position: right;
+    height: 600px;
+}
+
+.posicao a{
+    color: white;
+    font-family: 'Reboto', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.posicao a:hover{
+    color:rgb(130, 192, 67);
+}
