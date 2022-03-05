@@ -1,38 +1,19 @@
-$(document).ready(function(){
-   $("#banner-carrosel img:eq(0)").addclass("banner-ativo").show()
-})
-   setInterval(slide,1000)
-   
+$( document ).ready(function() {
+
+   $("#banner-carrosel img:eq(0)").addClass("banner-ativo").show()
+
+   setInterval(slide, 3000)
+
    function slide(){
-      if ($(".banner-ativo").next().length){
-         $(".banner-ativo").removeclass("banner-ativo").hide().next().addclass("banner-ativo").show()
-          }else{
-             $(".banner-ativo").removeclass()("banner-ativo").hide()
-             $("#banner-carrosel img:eq(0)").addclass("banner-ativo").show()
+       if($(".banner-ativo").next().length ){
+           $(".banner-ativo").removeClass("banner-ativo").hide().next().addClass("banner-ativo").show()
+       }else{
+           $(".banner-ativo").removeClass().hide()
+           $("#banner-carrosel img:eq(0)").addClass("banner-ativo").show()
+       }
+   }
+    
 
-          }
-      }
-   
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(document).ready(function(){
    $("#barras").click(function(){
       $("#menu").toggleclass("#menu-ativo")
  })
