@@ -13,26 +13,20 @@ $( document ).ready(function() {
        }
    }
     
-
    $("#barras").click(function(){
       $("#menu").toggleclass("#menu-ativo")
  })
 })
 
+    let email = document.getElementById("campo-email");
+
+    function enviaremail(){
+      let emaildigitado = email.value;
+      console.log(emaildigitado)
+    }
 
 
 
-
-
-
-
-
-
-
-
-
-
-    
 // $(document).ready(function(){
      // $("#barras").click(function(){
         // if($("#menu").hasclass("#menu-ativo")){

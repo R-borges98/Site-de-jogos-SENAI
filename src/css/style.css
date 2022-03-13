@@ -74,13 +74,130 @@ body{
     color: rgb(72, 138, 2);
 }
 
+.anima h2{
+    font-size: 1.2em;
+    display: inline-block;
+    color: white;
+    border-right: 2px solid #000;
+    margin-top: 180px;
+    max-width: 0px;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: pisca normal infinite .8s, escrever normal 5s steps(55) both;
+    animation-iteration-count: infinite ;
+}
+@keyframes pisca{
+    100%{
+        border-right-color: transparent;
+    }
+}
+@keyframes escrever{
+    100%{
+        max-width: 100%;
+    }
+}
+@keyframes infinite{
+    100%{
+        max-inline-size: 100%;
+    }
+}
+div.caixinha-animada{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    width: 170px;
+    height: 170px;
+    background-color: rgb(4, 218, 22);
+    margin: 100px auto;
+    position: relative;
+    animation-name: caixinha-animada;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+.caixinha-animada h2{
+    text-decoration: black;
+    text-align: center;
+}
+@keyframes caixinha-animada{
+    0%{background-color: rgb(207, 140, 140); right: 0;top: 0;}
+    25%{background-color: aqua; right: 500px; top: 0;}
+    50%{background-color: rgb(158, 230, 51); right: 500px; top: 400px;}
+    75%{background-color: rgb(12, 122, 21); right: 0; top: 400px;}
+    100%{background-color: rgb(177, 63, 206); right: 0; top: 0;}
+}
 
+.area-login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(18, 34, 2);
+    border-radius: 10px;
+    width: 385px;
+    height: 380px;
+    padding: 40px;
+}
+.login form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.login input{
+    margin-top: 10px;
+    background-color: rgb(243, 239, 239);
+    padding: 10px;
+    color: black;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+}
+.login-submit{
+    margin-top: 8px;
+    padding-left: 3px;
+    border: none;
+    height: 45px;
+    width: 100%;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+
+.login img{
+    width: 180px;
+    height: auto;
+}
+input::placeholder{
+    color: black;
+}
+
+form [type="submit"]{
+    display: block;
+    background-color: rgb(36, 26, 26);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p{
+    color: white;
+}
+a{ 
+    text-decoration: none;
+    margin-left: 5px;
+}
 .content{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 600px;
+    margin-top: 400px;
 }
 
 .card h3{
@@ -124,10 +241,16 @@ footer{
 .links{
     color: white;
 }
+.links li:hover{
+    color: darkgray;
+}
 .links-footer{
     display: flex;
     justify-content: space-between;
     width: 500px;
+}
+.links-footer h2:hover{
+    color: darkgrey;
 }
 .logo-rodape{
     display: flex;
@@ -135,18 +258,21 @@ footer{
     width: 200px;
     height: 125px;
 }
-.siga-nos{
+siga-nos h2{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 6px;   
+    margin-top: 9px
 }
 .siga-nos img{
     width: 25px;
     height: 25px;
 }
+
 .siga-nos h2{
     font-size:  17px;
+}
+.siga-nos-em{
+    display: flex;
+    margin-top: 30px;
 }
 .links h2{
     font-size: 24px;
@@ -155,12 +281,39 @@ footer{
 .cadastro h2{
     color: white;
     font-size: 17px;
+    margin-bottom: 8px;
+}
+ button:hover{
+    color: rgb(54, 94, 15);
+}
+.cadastro h2:hover{
+    color: darkgrey;
+}
+.cadastro form{
+    display: flex;
+    margin-bottom: 8px;
+}
+.cadastro h2{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.cadastro input[type="email"]{
+    height: 37px;
+    width: 195px;
+}
+.cadastro input[tyme="email"]::placeholder{
+    color: B8B3B3;
+    font-weight: bold;
 }
 
+button{
+    width: 156px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 18px;
+}
 
-
-    
-    
 .botao{
     font-family: 'Reboto';
     font-size: 20px;
@@ -176,8 +329,6 @@ footer{
     transition: 0.7s all;
 }
 
-
-
 /*/.posicao a{
     color: white; 
     font-family: 'Reboto', sans-serif;
@@ -190,14 +341,14 @@ footer{
 }/*/
 
 .carrossel{
-    height: -250px;
+    height: -350px;
     width: 649px;
     margin-top: 125px;
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
-    top: 118%;
-    left: 75%;
+    top: 123%;
+    left: 79%;
     transform: translate(-50%, -50%);
 }
 
@@ -224,9 +375,11 @@ footer{
 }
 
 input{
+    display: flex;
+}
+.slides input{
     display: none;
 }
-
 .slides{
     display: flex;
     width: 500%;
@@ -255,17 +408,18 @@ input{
     margin-left: -40%;
 }
 
-.texto h1{
+.texto h4{
     font-family: 'Roboto';
     color: rgb(8, 168, 45);
     text-transform: uppercase;
     position: absolute;
-    left: 100px;
-    margin-left: 100px;
-    margin-right: 600px;
-    margin-top: 1000px;
+    font-size: 30px;
+    right:  50px;
+    margin-left: 400px;
+    margin-right: 50px;
+    margin-top: 1450px;
 }
-.texto h1:hover{
+.texto h4:hover{
     color: white;
 }
 
