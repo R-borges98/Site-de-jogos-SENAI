@@ -12,9 +12,9 @@ $( document ).ready(function() {
            $("#banner-carrosel img:eq(0)").addClass("banner-ativo").show()
        }
    }
-    
+
    $("#barras").click(function(){
-      $("#menu").toggleclass("#menu-ativo")
+      $("#menu").toggleClass("#menu-ativo")
  })
 })
 
@@ -24,7 +24,6 @@ $( document ).ready(function() {
       let emaildigitado = email.value;
       console.log(emaildigitado)
     }
-
 
 
 // $(document).ready(function(){

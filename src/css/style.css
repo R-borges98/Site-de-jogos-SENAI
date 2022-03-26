@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?família=Roboto:wght@500&display=swap');
 *{
     margin: 0%;
     padding: 0%;
@@ -73,6 +74,7 @@ body{
 .secao-compras a:hover{
     color: rgb(72, 138, 2);
 }
+
 
 .anima h2{
     font-size: 1.2em;
@@ -340,7 +342,7 @@ button{
     color:rgb(130, 192, 67);
 }/*/
 
-.carrossel{
+/*.carrossel{
     height: -350px;
     width: 649px;
     margin-top: 125px;
@@ -406,7 +408,7 @@ input{
 
 #slide3:checked ~ .s1 {
     margin-left: -40%;
-}
+}*/
 
 .texto h4{
     font-family: 'Roboto';
@@ -425,7 +427,6 @@ input{
 
 .barra{
     width: 90px;
-    height: 80px;
     display: none;
 }
 
@@ -434,21 +435,116 @@ input{
 }
 
 @media screen and (mas-width:1200px) {
+    
     .container-grid{
         width: 90%;
     }
     .menu a{
-        font-size: 10px;
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
     } 
+    .secao-compras a{
+        font-size: 13px;
+    }
+    .secao-compras{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .banner-carrosel{
+        width: 847px;
+        height: 497px;
+    }
+    .anima h2{
+        margin-top: 100px;
+        font-size: 30px;
+    }
+    .caixinha-animada{
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+    .area-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login{
+        width: 300px;
+        height: 250px;
+        padding: 30px;
+    }
+    .login{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .login img{
+        width: 100%;
+        height: auto;
+    }
+    .texto h4{
+        position: center;
+        font-size: 25px;
+        right: 25px;
+        margin-left: 400px;
+        margin-right: 40px;
+        margin-top: 150px;
+    }
+    .card{
+        width: 200%;
+        height: 360px;
+    }
+    .rodape{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .siga-nos-em{
+        display: flex;
+        margin-top: 30px;
+    }.logo-rodape{
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        height: 125px;
+    }
+    .siga-nos img{
+        width: 20%;
+        height: 20px;
+     }
+    .links h2{
+        font-size: 20px;
+    }
+    .cadastro h2{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .cadastro input[tyme="email"]{
+        height: 27px;
+        width: 120px;
+    }
+    button{
+      width: 115px;
+      font-size: 14px;
+    }
+    .botao{
+        font-size: 15px;
+        padding: 8px;
+    }
+
 }
 
 @media screen and (max-windth:768px) {
-    h1{
-        color: blue;
-    }
+
     .barras{
         display: inline-block;
     }
+    
     .menu{
         display: none;
         flex-direction: column;
@@ -457,9 +553,109 @@ input{
         position: absolute;
         top: 0;
         right: 60px;
-        background: rgb(250, 248, 248);
+        background: white;
     }
     .menu-ativo{
         display: flex;
     }
+
+    .banner{
+        height: 497px;
+        width:  717px;
+        background-repeat: none;
+    }
+    .banner-carrosel img{
+        width: 100px;
+        height: 100px;
+    }
+    .secao-compras{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+
+    }
+    .anima h2{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .caixinha-animada{
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+    .area-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login{
+        width: 272px;
+        height: 200px;
+        padding: 16px;
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+    }
+    .login img{
+        width: 100%;
+        height: auto;
+    }
+    .texto h4{
+        position: center;
+        font-size: 20px;
+        right: 20px;
+        margin-left: 200px;
+        margin-right: 20px;
+        margin-top: 100px;
+    }
+    .card{
+        width: 100%;
+        height: 260px;
+    }
+    .rodape{
+        display: flex;
+        justify-content: space-between;
+        padding: 14px;
+    }
+    .siga-nos-em{
+        display: flex;
+        margin-top: 20px;
+    }
+    .logo-rodape{
+        display: flex;
+        justify-content: space-between;
+        width: 130px;
+        height: 125px;
+    }
+    .siga-nos img{
+        width: 20%;
+        height: 20px;
+    }
+    .links h2{
+        font-size: 10px;
+    }
+    .cadastro h2{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .cadastro input[tyme="email"]{
+        height: 20px;
+        width: 100px;
+    }
+    button{
+        width: 100px;
+        font-size: 13px;
+    }
+    .botao{
+        font-size: 14px;
+        padding: 6px;
+    }
+
+
+
+
+
 }
